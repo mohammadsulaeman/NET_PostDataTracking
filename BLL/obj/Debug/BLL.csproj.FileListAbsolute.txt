@@ -12,3 +12,17 @@ D:\SULAEMAN LATIHAN\UDEMY\NET PEMBELAJARAN\OAKCourse\BLL\obj\Debug\BLL.csproj.Co
 D:\SULAEMAN LATIHAN\UDEMY\NET PEMBELAJARAN\OAKCourse\BLL\obj\Debug\BLL.csproj.CopyComplete
 D:\SULAEMAN LATIHAN\UDEMY\NET PEMBELAJARAN\OAKCourse\BLL\obj\Debug\BLL.dll
 D:\SULAEMAN LATIHAN\UDEMY\NET PEMBELAJARAN\OAKCourse\BLL\obj\Debug\BLL.pdb
+D:\SULAEMAN LATIHAN\NET\NET_PostDataTracking\BLL\bin\Debug\BLL.dll
+D:\SULAEMAN LATIHAN\NET\NET_PostDataTracking\BLL\bin\Debug\BLL.pdb
+D:\SULAEMAN LATIHAN\NET\NET_PostDataTracking\BLL\bin\Debug\DAL.dll
+D:\SULAEMAN LATIHAN\NET\NET_PostDataTracking\BLL\bin\Debug\DTO.dll
+D:\SULAEMAN LATIHAN\NET\NET_PostDataTracking\BLL\bin\Debug\EntityFramework.dll
+D:\SULAEMAN LATIHAN\NET\NET_PostDataTracking\BLL\bin\Debug\DAL.pdb
+D:\SULAEMAN LATIHAN\NET\NET_PostDataTracking\BLL\bin\Debug\DAL.dll.config
+D:\SULAEMAN LATIHAN\NET\NET_PostDataTracking\BLL\bin\Debug\DTO.pdb
+D:\SULAEMAN LATIHAN\NET\NET_PostDataTracking\BLL\bin\Debug\EntityFramework.xml
+D:\SULAEMAN LATIHAN\NET\NET_PostDataTracking\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\SULAEMAN LATIHAN\NET\NET_PostDataTracking\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\SULAEMAN LATIHAN\NET\NET_PostDataTracking\BLL\obj\Debug\BLL.csproj.CopyComplete
+D:\SULAEMAN LATIHAN\NET\NET_PostDataTracking\BLL\obj\Debug\BLL.dll
+D:\SULAEMAN LATIHAN\NET\NET_PostDataTracking\BLL\obj\Debug\BLL.pdb

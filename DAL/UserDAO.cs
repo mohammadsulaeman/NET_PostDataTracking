@@ -33,5 +33,18 @@ namespace DAL
                 throw ex;
             }
         }
+
+        public int AddUser(T_User user)
+        {
+            try
+            {
+                db.T_User.Add(user);
+                db.SaveChanges();
+                return user.ID;
+            }catch(Exception e)
+            {
+                throw e;
+            }
+        }
     }
 }

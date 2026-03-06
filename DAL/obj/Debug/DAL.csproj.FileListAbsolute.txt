@@ -10,3 +10,15 @@ D:\SULAEMAN LATIHAN\UDEMY\NET PEMBELAJARAN\OAKCourse\DAL\obj\Debug\DAL.csproj.Co
 D:\SULAEMAN LATIHAN\UDEMY\NET PEMBELAJARAN\OAKCourse\DAL\obj\Debug\DAL.csproj.CopyComplete
 D:\SULAEMAN LATIHAN\UDEMY\NET PEMBELAJARAN\OAKCourse\DAL\obj\Debug\DAL.dll
 D:\SULAEMAN LATIHAN\UDEMY\NET PEMBELAJARAN\OAKCourse\DAL\obj\Debug\DAL.pdb
+D:\SULAEMAN LATIHAN\NET\NET_PostDataTracking\DAL\bin\Debug\DAL.dll.config
+D:\SULAEMAN LATIHAN\NET\NET_PostDataTracking\DAL\bin\Debug\DAL.dll
+D:\SULAEMAN LATIHAN\NET\NET_PostDataTracking\DAL\bin\Debug\DAL.pdb
+D:\SULAEMAN LATIHAN\NET\NET_PostDataTracking\DAL\bin\Debug\DTO.dll
+D:\SULAEMAN LATIHAN\NET\NET_PostDataTracking\DAL\bin\Debug\EntityFramework.dll
+D:\SULAEMAN LATIHAN\NET\NET_PostDataTracking\DAL\bin\Debug\DTO.pdb
+D:\SULAEMAN LATIHAN\NET\NET_PostDataTracking\DAL\bin\Debug\EntityFramework.xml
+D:\SULAEMAN LATIHAN\NET\NET_PostDataTracking\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\SULAEMAN LATIHAN\NET\NET_PostDataTracking\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\SULAEMAN LATIHAN\NET\NET_PostDataTracking\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\SULAEMAN LATIHAN\NET\NET_PostDataTracking\DAL\obj\Debug\DAL.dll
+D:\SULAEMAN LATIHAN\NET\NET_PostDataTracking\DAL\obj\Debug\DAL.pdb

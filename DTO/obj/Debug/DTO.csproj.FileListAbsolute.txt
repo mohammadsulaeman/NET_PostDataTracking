@@ -4,3 +4,8 @@ D:\SULAEMAN LATIHAN\UDEMY\NET PEMBELAJARAN\OAKCourse\DTO\obj\Debug\DTO.csproj.As
 D:\SULAEMAN LATIHAN\UDEMY\NET PEMBELAJARAN\OAKCourse\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 D:\SULAEMAN LATIHAN\UDEMY\NET PEMBELAJARAN\OAKCourse\DTO\obj\Debug\DTO.dll
 D:\SULAEMAN LATIHAN\UDEMY\NET PEMBELAJARAN\OAKCourse\DTO\obj\Debug\DTO.pdb
+D:\SULAEMAN LATIHAN\NET\NET_PostDataTracking\DTO\bin\Debug\DTO.dll
+D:\SULAEMAN LATIHAN\NET\NET_PostDataTracking\DTO\bin\Debug\DTO.pdb
+D:\SULAEMAN LATIHAN\NET\NET_PostDataTracking\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\SULAEMAN LATIHAN\NET\NET_PostDataTracking\DTO\obj\Debug\DTO.dll
+D:\SULAEMAN LATIHAN\NET\NET_PostDataTracking\DTO\obj\Debug\DTO.pdb
