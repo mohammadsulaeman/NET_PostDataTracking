@@ -70,6 +70,54 @@ namespace UI.Areas.Admin.Controllers
         }
 
 
+        public ActionResult UpdateUser(int ID)
+        {
+            UserDTO dto = new UserDTO();
+            dto = bll.GetUsersWithID(ID);
+            return View(dto);
+        }
+
+        [HttpPost]
+        public ActionResult UpdateUser(UserDTO model)
+        {
+            if(!ModelState.IsValid)
+            {
+                ViewBag.ProcessState = General.Message.EmptyArea;
+            }else
+            {
+                if(model.UserImage != null)
+                {
+                    string filename = "";
+                    HttpPostedFileBase postedFile = model.UserImage;
+                    Bitmap UserImage = new Bitmap(postedFile.InputStream);
+                    Bitmap resizeImage = new Bitmap(UserImage, 128, 128);
+                    string ext = Path.GetExtension(postedFile.FileName);
+                    if (ext == ".jpg" || ext == ".jpeg" || ext == ".png" || ext == ".gif")
+                    {
+                        string uniqueNumber = Guid.NewGuid().ToString();
+                        filename = uniqueNumber + postedFile.FileName;
+                        resizeImage.Save(Server.MapPath("~/Areas/Admin/Content/UserImage/" + filename));
+                        model.ImagePath = filename;
+                    }
+                    else
+                    {
+                        ViewBag.ProcessState = General.Message.ExtensionError;
+                    }
+
+                    
+                }
+                string oldImagePath = bll.UpdateUser(model);
+                if(model.UserImage != null)
+                {
+                    if(System.IO.File.Exists(Server.MapPath("~/Areas/Admin/Content/UserImage/" + oldImagePath)))
+                    {
+                        System.IO.File.Delete(Server.MapPath("~/Areas/Admin/Content/UserImage/" + oldImagePath));
+                    }
+                    ViewBag.ProcessState = General.Message.UpdateSuccess;
+                }
+            }
+            return View(model);
+        }
         
     }
 }

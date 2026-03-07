@@ -47,6 +47,42 @@ namespace DAL
             }
         }
 
+        public UserDTO GetUsersWithID(int iD)
+        {
+            T_User user = db.T_User.First(x => x.ID == iD);
+            UserDTO dto = new UserDTO();
+            dto.ID = user.ID;
+            dto.Name = user.NameSurname;
+            dto.Username = user.Username;
+            dto.Password = user.Password;
+            dto.isAdmin = user.isAdmin;
+            dto.Email = user.Email;
+            dto.ImagePath = user.ImagePath;
+            return dto;
+        }
+
+        public string UpdateUser(UserDTO model)
+        {
+            try
+            {
+                T_User user = db.T_User.First(x => x.ID == model.ID);
+                string oldImagePath = user.ImagePath;
+                user.NameSurname = model.Name;
+                user.Username = model.Username;
+                if (model.ImagePath != null)
+                    user.ImagePath = model.ImagePath;
+                user.Email = model.Email;
+                user.Password = model.Password;
+                user.LastUpdateDate = DateTime.Now;
+                user.LastUpdateUserID = UserStatic.UserID;
+                user.isAdmin = model.isAdmin;
+                return oldImagePath;
+            }catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         public List<UserDTO> GetUsers()
         {
             List<UserDTO> userDTOs = new List<UserDTO>();
