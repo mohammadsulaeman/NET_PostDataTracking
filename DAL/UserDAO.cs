@@ -46,5 +46,24 @@ namespace DAL
                 throw e;
             }
         }
+
+        public List<UserDTO> GetUsers()
+        {
+            List<UserDTO> userDTOs = new List<UserDTO>();
+
+            List<T_User> users = db.T_User.Where(x => x.isDeleted == false).ToList();
+
+            foreach(var item in users)
+            {
+                UserDTO dto = new UserDTO();
+                dto.ID = item.ID;
+                dto.Name = item.NameSurname;
+                dto.Username = item.Username;
+                dto.ImagePath = item.ImagePath;
+                userDTOs.Add(dto);
+            }
+
+            return userDTOs;
+        }
     }
 }

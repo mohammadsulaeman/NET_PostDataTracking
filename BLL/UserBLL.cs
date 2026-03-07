@@ -26,10 +26,16 @@ namespace BLL
             user.NameSurname = model.Name;
             user.isAdmin = model.isAdmin;
             user.AddDate = DateTime.Now;
+            user.isDeleted = false;
             user.LastUpdateDate = DateTime.Now;
             user.LastUpdateUserID = UserStatic.UserID;
             int ID = userDAO.AddUser(user);
             LogDAO.AddLog(General.ProcessType.UserAdd, General.TableName.User, ID);
+        }
+
+        public List<UserDTO> GetUsers()
+        {
+            return userDAO.GetUsers();
         }
     }
 }
