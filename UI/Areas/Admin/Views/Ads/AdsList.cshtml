@@ -1,27 +1,24 @@
 ﻿
 @{
-    ViewBag.Title = "SocialMediaList";
+    ViewBag.Title = "AdsList";
     Layout = "~/Areas/Admin/Views/Shared/AdminLayout.cshtml";
 }
 
-@model List<DTO.SocialMediaDTO>
+@model List<DTO.AdsDTO>
 <section class="content-header">
 
     <h1>Meta List</h1>
     <ul class="breadcrumb float-sm-left">
         <li class="breadcrumb-item"><a>Admin</a></li>
-        <li class="breadcrumb-item"><a>Social Media</a></li>
-        <li class="breadcrumb-item active"><a>Social Media List</a></li>
+        <li class="breadcrumb-item"><a>Ads</a></li>
+        <li class="breadcrumb-item active"><a>Ads List</a></li>
     </ul>
 </section>
 <br />
 <div class="card-footer">
-    <a href="/Admin/SocialMedia/AddSocialMedia" class="btn btn-primary">Add SocialMedia</a>
+    <a href="/Admin/Ads/AddAds" class="btn btn-primary">Add Ads</a>
 </div>
 <div class="card">
-    <div class="card-header">
-        <h3 class="card-title">Social Media Link</h3>
-    </div>
     <!-- /.card-header -->
     <div class="card-body">
         <table id="example1" class="table table-bordered table-striped">
@@ -43,10 +40,10 @@
                         <td>@item.Name</td>
                         <td><a href="@item.Link">@item.Name</a></td>
                         <td>
-                            <img src="~/Areas/Admin/Content/SocialMediaImages/@item.ImagePath" width="60" height="40" />
+                            <img src="~/Areas/Admin/Content/AdsImages/@item.ImagePath" width="60" height="40" />
                         </td>
                         <td align="center" valign="middle">
-                            <a href="/Admin/SocialMedia/UpdateSocialMedia/@item.ID">
+                            <a href="/Admin/Ads/UpdateAds/@item.ID">
                                 <br />
                                 <img src="~/Areas/Admin/Content/icons/updates-16.ico" />
                             </a>
