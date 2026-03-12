@@ -69,6 +69,49 @@ namespace UI.Areas.Admin.Controllers
             return View(dto);
         }
 
+        [HttpPost]
+        public ActionResult UpdateAds(AdsDTO model)
+        {
+            if (!ModelState.IsValid)
+            {
+                ViewBag.ProcessState = General.Message.EmptyArea;
+            }
+            else
+            {
+                if(model.AdsImage != null)
+                {
+                    HttpPostedFileBase postedFile = model.AdsImage;
+                    Bitmap SocilaMedia = new Bitmap(postedFile.InputStream);
+                    string ext = Path.GetExtension(postedFile.FileName);
+                    string filename = "";
+                    if (ext == ".jpg" || ext == ".jpeg" || ext == ".png" || ext == ".png")
+                    {
+                        string uniquenumber = Guid.NewGuid().ToString();
+                        filename = uniquenumber + postedFile.FileName;
+                        SocilaMedia.Save(Server.MapPath("~/Areas/Admin/Content/AdsImages/" + filename));
+                        model.ImagePath = filename;
+                       
+                    }
+                    else
+                    {
+                        ViewBag.ProcessState = General.Message.ExtensionError;
+                    }
+
+
+                }
+
+                string oldImagePath = bll.UpdateAds(model);
+                if(model.AdsImage != null)
+                {
+                    if(System.IO.File.Exists(Server.MapPath("~/Areas/Admin/Content/AdsImages/" + oldImagePath)))
+                    {
+                        System.IO.File.Delete(Server.MapPath("~/Areas/Admin/Content/AdsImages/" + oldImagePath));
+                    }
+                }
+                ViewBag.ProcessState = General.Message.UpdateSuccess;
+            }
+            return View(model);
+        }
     }
 
     

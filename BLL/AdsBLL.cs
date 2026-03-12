@@ -32,7 +32,14 @@ namespace BLL
 
         public AdsDTO GetAdsWithID(int iD)
         {
-            throw new NotImplementedException();
+            return dao.GetAdsWithID(iD);
+        }
+
+        public string UpdateAds(AdsDTO model)
+        {
+            string oldImagePath = dao.UpdateAds(model);
+            LogDAO.AddLog(General.ProcessType.AdsUpdate, General.TableName.Ads, model.ID);
+            return oldImagePath;
         }
     }
 }

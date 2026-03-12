@@ -1,16 +1,16 @@
 ﻿
 @{
-    ViewBag.Title = "AddAds";
+    ViewBag.Title = "UpdateAds";
     Layout = "~/Areas/Admin/Views/Shared/AdminLayout.cshtml";
 }
 
 <section class="content-header">
 
-    <h1>Add Ads</h1>
+    <h1>Update Ads</h1>
     <ul class="breadcrumb float-sm-left">
         <li class="breadcrumb-item"><a>Admin</a></li>
         <li class="breadcrumb-item"><a>Ads</a></li>
-        <li class="breadcrumb-item active"><a>Add Ads</a></li>
+        <li class="breadcrumb-item active"><a>Update Ads</a></li>
     </ul>
 </section>
 <br />
@@ -22,7 +22,7 @@
         <div class="col-md-9">
             @Html.Partial("~/Areas/Admin/Views/Shared/MessageForm.cshtml")
             <div class="box box-primary">
-                @using (Html.BeginForm("AddAds", "Ads", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+                @using (Html.BeginForm("UpdateAds", "Ads", FormMethod.Post, new { @enctype = "multipart/form-data" }))
                 {
                     @Html.Partial("Partial/AdsForm")
                 }

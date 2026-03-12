@@ -39,5 +39,38 @@ namespace DAL
 
             return adsList;
         }
+
+        public string UpdateAds(AdsDTO model)
+        {
+            try
+            {
+                Ad ads = db.Ads.First(x => x.ID == model.ID);
+                string oldImagePath = ads.ImagePath;
+                ads.Name = model.Name;
+                ads.Link = model.Link;
+                if (model.ImagePath != null)
+                    ads.ImagePath = model.ImagePath;
+                ads.Size = model.ImageSize;
+                ads.LastUpdateDate = DateTime.Now;
+                ads.LastUpdateUserID = UserStatic.UserID;
+                db.SaveChanges();
+                return oldImagePath;
+            }catch(Exception e)
+            {
+                throw e;
+            }
+        }
+
+        public AdsDTO GetAdsWithID(int iD)
+        {
+            AdsDTO dto = new AdsDTO();
+            Ad ad = db.Ads.First(x => x.ID == iD);
+            dto.ID = ad.ID;
+            dto.Name = ad.Name;
+            dto.ImagePath = ad.ImagePath;
+            dto.Link = ad.Link;
+            dto.ImageSize = ad.Size;
+            return dto;
+        }
     }
 }
